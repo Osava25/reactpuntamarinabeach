@@ -1,0 +1,22 @@
+.nav__li {
+    display: inline-block;
+    padding: 26px 12px;
+}
+
+.nav__li a {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.nav__li:hover > a {
+    color: #dbdbdb;
+    border-bottom: 1px solid #fff;
+}
+
+.nav__li:active > a {
+    color: #dbdbdb;
+    border-bottom: 1px solid #fff;
+}

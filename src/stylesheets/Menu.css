@@ -1,0 +1,23 @@
+.nav {
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
+}
+.nav__ul {
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+}
+
+.nav__responsive-ul {
+    display: none;
+}
+
+.logo {
+    width: 300px
+}
