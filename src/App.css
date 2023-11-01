@@ -22,3 +22,59 @@ p {
 li {
   list-style: none;
 }
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.col-60 {
+  width: 60%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+@font-face {
+  font-family: 'kepler-std';
+  src: url(./fonts/kepler-std/KeplerStd-Light.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'kepler-std-bold';
+  src: url(./fonts/kepler-std/KeplerStd-Bold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'passion';
+  src: url(./fonts/passion_sans_pd/passionsanspdag-regular-webfont.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'passion-semibold';
+  src: url(./fonts/passion_sans_pd/passionsanspdai-semibold-webfont.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'passion';
+  src: url(./fonts/passion_sans_pd/passionsanspdak-bold-webfont.woff);
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 860px) {
+  .col-60, .col-50, .col-40 {
+      width: 100%;
+  }
+}   

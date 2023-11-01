@@ -1,5 +1,6 @@
 import React from "react";
 import '../stylesheets/ListMenu.css'
+import '../index.css'
 
 function ListMenu(props) {
   return (
@@ -11,4 +12,4 @@ function ListMenu(props) {
   )
 }
 
-export default ListMenu
+export default ListMenu;

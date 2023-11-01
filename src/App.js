@@ -1,12 +1,17 @@
 import './App.css';
 import Menu from './components/Menu.js';
-import ListMenu from './components/ListMenu';
+import ContentHeader from './components/ContentHeader';
 
 function App() {
   return (
     <div className="App">
       <header>
         <Menu />
+        <ContentHeader
+          description="La vida que sueñas"
+          description2="frente al "
+          description3="Mar Caribe"
+        />
       </header>
     </div>
   );

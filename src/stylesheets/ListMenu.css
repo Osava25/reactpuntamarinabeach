@@ -6,7 +6,7 @@
 .nav__li a {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0 10px;
     text-decoration: none;
 }
@@ -20,3 +20,5 @@
     color: #dbdbdb;
     border-bottom: 1px solid #fff;
 }
+
+

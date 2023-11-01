@@ -1,12 +1,11 @@
 .nav {
-    height: 100px;
+    height: 72px;
     width: 100%;
-    background-color: aqua;
 }
 .nav__ul {
     position: fixed;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,3 +20,93 @@
 .logo {
     width: 300px
 }
+
+@media only screen and (min-width: 861px) and (max-width: 1190px) {
+    .nav__ul {
+        display: none;
+    }
+    .nav__responsive-ul {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+    .nav__responsive-li {
+        padding: 8px 4px;
+    }
+    .nav__responsive-li a {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+    
+    .nav__reponsive-li-container {
+        width: 100%;
+        background-color: #037a74;
+        position: relative;
+        top: -1000px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; 
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    .nav__li-container-transition {
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .info-form {
+        width: 100%;
+    }
+    
+    .nav {
+        height: 72px;
+        width: 100%;
+    }
+    .nav__ul {
+        display: none;
+    }
+    .nav__responsive-ul {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+    .nav__responsive-li {
+        padding: 8px 4px;
+    }
+    .nav__responsive-li a {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+    
+    .nav__reponsive-li-container {
+        width: 100%;
+        background-color: #037a74;
+        position: relative;
+        top: -1000px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; 
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    .nav__li-container-transition {
+        top: 0px;
+    }
+    .logo {
+        width: 280px;
+        padding: 16px 44px 2px 6px;
+    }
+
+    .logo img {
+        width: 236px;
+    }
+}   
