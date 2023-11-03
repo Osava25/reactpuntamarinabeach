@@ -1,0 +1,31 @@
+.modulo-frase {
+    font-family: 'kepler-std';
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #037a74;
+    text-align: center;
+}
+
+.modulo-frase h2 {
+    color: #fff;
+    font-size: 34px;
+}
+.modulo-frase p {
+    font-family: 'kepler-std';
+    color: #fff;
+    font-size: 28px;
+}
+.modulo-frase  a {
+    font-family: 'kepler-std-bold';
+    color: #fff;
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 860px) {
+    .modulo-frase h2 {
+        font-size: 1.5rem;
+    }
+    .modulo-frase  a, .modulo-frase p {
+        font-size: 1.3rem;
+    }
+}    

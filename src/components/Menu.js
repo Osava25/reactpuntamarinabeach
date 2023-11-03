@@ -40,10 +40,10 @@ function Menu() {
               <img src={require("../images/Logo-puntamarina-600.png")} alt="" />
             </a>
           </div>
-            <div id="button-responsive" className="nav__responsive-button fas fa-bars"></div>
-          </div>
-          <div className="separacion-hr"><hr /></div>
-            <div className="nav__reponsive-li-container">
+          <div id="button-responsive" className="nav__responsive-button fas fa-bars"></div>
+        </div>
+        <div className="separacion-hr"><hr /></div>
+          <div className="nav__reponsive-li-container">
               <ListMenuResponsive 
                 ruta="zonascomunes" 
                 listmenutext="Zonas Comunes" />
