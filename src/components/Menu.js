@@ -4,9 +4,20 @@ import ListMenuResponsive from './ListMenuResponsive';
 import '../stylesheets/Menu.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react';
 
 function Menu() {
   const icon = <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
+
+  const [bgMenu, setBgMenu] = useState(0);
+  let fixedMenu = document.getElementById("nav_menu");
+  const handleScroll = () => {
+    setBgMenu(bgMenu + window.scrollY);
+    fixedMenu.classList.toggle("bg-menu-scroll", window.scrollY > 0)
+  }; 
+  
+  window.addEventListener("scroll", handleScroll);
+  
   return (
     <nav className='nav'>
       <ul id="nav_menu" className="nav__ul">
