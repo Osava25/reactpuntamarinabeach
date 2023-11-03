@@ -2,8 +2,11 @@ import React from 'react';
 import ListMenu from './ListMenu';
 import ListMenuResponsive from './ListMenuResponsive';
 import '../stylesheets/Menu.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Menu() {
+  const icon = <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
   return (
     <nav className='nav'>
       <ul id="nav_menu" className="nav__ul">
@@ -40,7 +43,7 @@ function Menu() {
               <img src={require("../images/Logo-puntamarina-600.png")} alt="" />
             </a>
           </div>
-          <div id="button-responsive" className="nav__responsive-button fas fa-bars"></div>
+          {icon}
         </div>
         <div className="separacion-hr"><hr /></div>
           <div className="nav__reponsive-li-container">

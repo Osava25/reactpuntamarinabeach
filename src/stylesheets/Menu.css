@@ -20,7 +20,16 @@
 .logo {
     width: 300px
 }
-
+hr {
+    width: 86%;
+    margin: 0 auto;
+    color: #fff;
+}
+.separacion-hr {
+    margin-top: 80px;
+    position: relative;
+    z-index: 9999;
+}
 @media only screen and (min-width: 861px) and (max-width: 1190px) {
     .nav__ul {
         display: none;
@@ -98,6 +107,15 @@
         transition: all 0.5s;
         z-index: 1;
     }
+    .nav__responsive-button-container {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        font-size: 25px;
+        z-index: 100;
+    } 
     .nav__li-container-transition {
         top: 0px;
     }
