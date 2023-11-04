@@ -7,16 +7,39 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
 function Menu() {
-  const icon = <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
-
+  // Cambio color menú
   const [bgMenu, setBgMenu] = useState(0);
   let fixedMenu = document.getElementById("nav_menu");
-  const handleScroll = () => {
+
+  const handleScroll = (e) => {
     setBgMenu(bgMenu + window.scrollY);
-    fixedMenu.classList.toggle("bg-menu-scroll", window.scrollY > 0)
+    if (fixedMenu) {
+      fixedMenu.classList.toggle("bg-menu-scroll", window.scrollY > 0)
+    }
   }; 
-  
   window.addEventListener("scroll", handleScroll);
+  
+  // Menú responsive
+  let menuResponsive = document.querySelector(".nav__reponsive-li-container");
+  let listMenuResponsive = document.querySelectorAll(".nav__responsive-li"); 
+  const [menuResp, setMenuResp] = useState(1000);
+  
+  const moveMenuResponsive = () => {
+      setMenuResp(menuResp + 1)
+      if (menuResponsive) {
+        menuResponsive.classList.toggle("nav__li-container-transition");
+
+      }
+
+      listMenuResponsive.forEach ( menu => {
+        menu.addEventListener("click", () => {
+          menuResponsive.classList.remove("nav__li-container-transition");
+        });
+      });
+  }
+
+  const icon = <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} onClick={moveMenuResponsive}/>
+ 
   
   return (
     <nav className='nav'>
