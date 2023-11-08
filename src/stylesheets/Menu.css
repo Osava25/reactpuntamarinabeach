@@ -34,6 +34,9 @@ hr {
     background-color: #000000bd;
     transition: all 1s;
 }
+.icon-menu-responsive {
+    display: none;
+}
 @media only screen and (min-width: 861px) and (max-width: 1190px) {
     .nav__ul {
         display: none;
@@ -130,5 +133,8 @@ hr {
 
     .logo img {
         width: 236px;
+    }
+    .icon-menu-responsive {
+        display: block;
     }
 }   

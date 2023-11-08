@@ -1,17 +1,17 @@
 import React from 'react';
 import ListMenu from './ListMenu';
-import ListMenuResponsive from './ListMenuResponsive';
 import '../stylesheets/Menu.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
+import useScreenSize from '../hooks/useScreenSize';
 
-function Menu() {
+function Menu({ menuMovil }) {
   // Cambio color menú
   const [bgMenu, setBgMenu] = useState(0);
   let fixedMenu = document.getElementById("nav_menu");
 
-  const handleScroll = (e) => {
+  const handleScroll = () => {
     setBgMenu(bgMenu + window.scrollY);
     if (fixedMenu) {
       fixedMenu.classList.toggle("bg-menu-scroll", window.scrollY > 0)
@@ -28,7 +28,6 @@ function Menu() {
       setMenuResp(menuResp + 1)
       if (menuResponsive) {
         menuResponsive.classList.toggle("nav__li-container-transition");
-
       }
 
       listMenuResponsive.forEach ( menu => {
@@ -38,18 +37,23 @@ function Menu() {
       });
   }
 
-  const icon = <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} onClick={moveMenuResponsive}/>
+  const icon = <FontAwesomeIcon icon={faBars} className='icon-menu-responsive' style={{color: "#ffffff",}} onClick={moveMenuResponsive} />
+
+  const screenSize = useScreenSize();
  
-  
   return (
     <nav className='nav'>
-      <ul id="nav_menu" className="nav__ul">
+      <ul id="nav_menu" className={screenSize.width < 860 ? "nav__responsive-ul" : "nav__ul"}>
+      <div className="nav__responsive-button-container">
         <div className='logo'>
         <a href="/">
           <img src={require("../images/Logo-puntamarina-600.png")} alt="Puntamarina Beach" />
         </a>
         </div>
-        <div className='nav__li-container'>
+        {icon}
+        </div>
+        <div className="separacion-hr"><hr /></div>
+        <div className={screenSize.width < 860 ? "nav__reponsive-li-container" : "nav__li-container"}>
           <ListMenu
             ruta="zonascomunes" 
             listmenutext="Zonas Comunes" />
@@ -69,37 +73,6 @@ function Menu() {
             ruta="contacto" 
             listmenutext="Contacto" />              
         </div>
-      </ul>
-      <ul className="nav__responsive-ul">
-        <div className="nav__responsive-button-container">
-          <div className="logo">
-            <a href="/">
-              <img src={require("../images/Logo-puntamarina-600.png")} alt="" />
-            </a>
-          </div>
-          {icon}
-        </div>
-        <div className="separacion-hr"><hr /></div>
-          <div className="nav__reponsive-li-container">
-              <ListMenuResponsive 
-                ruta="zonascomunes" 
-                listmenutext="Zonas Comunes" />
-              <ListMenuResponsive 
-                ruta="apartamentos" 
-                listmenutext="Apartamentos" />
-              <ListMenuResponsive 
-                ruta="ubicacion" 
-                listmenutext="Ubicación" />
-              <ListMenuResponsive 
-                ruta="entorno" 
-                listmenutext="Entorno" />
-              <ListMenuResponsive 
-                ruta="lafirma" 
-                listmenutext="La Firma" />
-              <ListMenuResponsive 
-                ruta="contacto" 
-                listmenutext="Contacto"/>          
-          </div>
       </ul>
     </nav>
   );    

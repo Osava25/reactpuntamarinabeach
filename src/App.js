@@ -6,7 +6,7 @@ import InfoFormSection from './components/ContentInfoForm';
 import BarraSeparadadora from './components/BarraSeparadora';
 
 function App() {
-
+  
   return (
     <div className="App">
       <header>
